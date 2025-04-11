@@ -1,8 +1,23 @@
-
 ---
 import Footer from "../components/Footer.astro";
 import DropDownPlus from "../components/DropDownPlus.astro";
 import Layout from "../layouts/Layout.astro";
+
+//@ts-nocheck
+
+const url =
+  "https://evffelaoffslumrthkla.supabase.co/rest/v1/kalender_plugins?select=*";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV2ZmZlbGFvZmZzbHVtcnRoa2xhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjczMzAsImV4cCI6MjA1OTg0MzMzMH0.IQISTIgMb0f2rhVxPfZjE2st9c7H3A3EHI3DZ-mEHv8";
+
+const options = {
+  headers: {
+    apiKey: key,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+console.log(data);
 ---
 
 <Layout>
