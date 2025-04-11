@@ -1,0 +1,38 @@
+---
+//@ts-nocheck
+
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  //   const response = await fetch('...');
+  //   const data = await response.json();
+  const url =
+    "https://evffelaoffslumrthkla.supabase.co/rest/v1/kalender_plugins?select=*";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV2ZmZlbGFvZmZzbHVtcnRoa2xhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjczMzAsImV4cCI6MjA1OTg0MzMzMH0.IQISTIgMb0f2rhVxPfZjE2st9c7H3A3EHI3DZ-mEHv8";
+
+  const options = {
+    headers: {
+      apiKey: key,
+    },
+  };
+
+  const data = await fetch(url, options).then((res) => res.json());
+  console.log(data);
+
+  return data.map((kalender_plugins) => {
+    return {
+      params: { slug: kalender_plugins.slug },
+      props: { kalender_plugins },
+    };
+  });
+}
+
+// const { id } = Astro.params;
+const { kalender_plugins } = Astro.props;
+---
+
+<!-- Jeg kan skrive title her, som jeg definerer i Layout.astro. Pga det kommer navnet oppe i fanen til at hedde det eventet handler om, i single view -->
+<Layout title={kalender_plugins.title}>
+  <h1>{kalender_plugins.title}</h1>
+</Layout>
