@@ -1,0 +1,67 @@
+---
+const { title, content } = Astro.props;
+import Layout from "../layouts/Layout.astro";
+---
+
+<div class="accordion-wrapper">
+  <details class="accordion">
+    <summary>
+      <span class="title-text">{title}</span>
+      <span class="plus_icon">+ </span>
+    </summary>
+    <div class="content">
+      {content}
+    </div>
+  </details>
+</div>
+
+<style>
+  .accordion-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  details.accordion {
+    border: none;
+    padding: 0.2rem 0;
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.2rem;
+  }
+
+  .plus_icon {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3 ease;
+  }
+
+  details[open] .plus_icon {
+    transform: rotate(45deg);
+  }
+
+  .content {
+    padding: 0.5rem 0 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 768px) {
+    summary {
+      font-size: 1.1rem;
+    }
+
+    .content {
+      font-size: 1.05rem;
+    }
+  }
+</style>
