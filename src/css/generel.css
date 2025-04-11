@@ -1,0 +1,196 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-lightgrey);
+}
+
+html {
+  --primary-lightgrey: #ededed;
+  --text-darkblue: #003b5b;
+  --white: #ffffff;
+  --kea-red: #ea4d44;
+  --accent-orange: #ff7500;
+  --tyrkis-dark: #51d1bc;
+  --background-tyrkis: #b9ede7;
+  --background-orange-light: #ffce92;
+  --backgroud-yellow: #ffdb7f;
+  --background-pink: #f39e9a;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "robotobold_condensed";
+  src:
+    url("../fonts/roboto/roboto-boldcondensed-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-boldcondensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotoblack";
+  src:
+    url("../fonts/roboto/roboto-black-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotocondensed";
+  src:
+    url("../fonts/roboto/roboto-condensed-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotolight";
+  src:
+    url("../fonts/roboto/roboto-light-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotomedium";
+  src:
+    url("../fonts/roboto/roboto-medium-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotoregular";
+  src:
+    url("../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* typografier */
+
+h1 {
+  line-height: 1.05;
+  font-size: 62px;
+  text-wrap: pretty;
+  color: var(--text-darkblue);
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "robotobold_condensed";
+  font-size: 44px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-darkblue);
+}
+
+h3 {
+  font-family: "robotobold_condensed";
+  font-size: 92px;
+}
+
+h4 {
+  font-family: "robotobold_condensed";
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-darkblue);
+}
+
+h5 {
+  font-family: "robotobold_condensed";
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 75ch;
+  line-height: 2.4rem;
+  color: var(--text-darkblue);
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.9rem;
+  color: var(--text-darkblue);
+}
+
+.p_white {
+  font-size: 24px;
+  line-height: 1.9rem;
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-darkblue);
+}
+@media (min-width: 760px) {
+  h1 {
+    font-family: helvetica neue;
+    line-height: 1.05;
+    font-size: 72px;
+    font-weight: 400;
+    font-style: normal;
+    text-wrap: pretty;
+    margin-bottom: 10px;
+    color: var(--text-darkblue);
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-darkblue);
+  }
+
+  h3 {
+    font-size: 92px;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-darkblue);
+  }
+
+  h5 {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-darkblue);
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 1.9rem;
+    color: var(--text-darkblue);
+  }
+
+  .p_white {
+    font-size: 24px;
+    line-height: 1.9rem;
+    color: var(--white);
+  }
+}
