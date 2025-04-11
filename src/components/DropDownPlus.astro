@@ -1,16 +1,19 @@
 ---
 const { title, content } = Astro.props;
 import Layout from "../layouts/Layout.astro";
+import "../css/generel.css";
 ---
 
 <div class="accordion-wrapper">
   <details class="accordion">
     <summary>
-      <span class="title-text">{title}</span>
+      <span class="title-text">
+        <h4>{title}</h4>
+      </span>
       <span class="plus_icon">+ </span>
     </summary>
     <div class="content">
-      {content}
+      <p>{content}</p>
     </div>
   </details>
 </div>
@@ -53,6 +56,20 @@ import Layout from "../layouts/Layout.astro";
     padding: 0.5rem 0 0.5rem 0;
     font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  .span {
+    font-family: "robotobold_condensed";
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-darkblue);
+  }
+
+  .content {
+    font-size: 24px;
+    line-height: 1.9rem;
+    color: var(--text-darkblue);
   }
 
   @media (min-width: 768px) {
