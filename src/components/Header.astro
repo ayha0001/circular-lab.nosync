@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <header>
+    <div class="logo">
+      <img src="/public/logo_kea.jpeg" alt="logo" />
+    </div>
+    <div class="nav-boxes">
+      <div class="nav-box"><a href="/index">Index</a></div>
+      <div class="nav-box"><a href="/overview">Overview</a></div>
+      <div class="nav-box"><a href="/singleview">Singleview</a></div>
+    </div>
+    <!-- Luppeknap -->
+    <button class="search-toggle">
+      <img src="/public/lup.jpeg" alt="Søg" />
+    </button>
+
+    <!-- Skjult søgefelt -->
+    <div id="searchDropdown" class="search-dropdown">
+      <form action="/soeg" method="get">
+        <input type="text" name="q" placeholder="Søg..." />
+      </form>
+    </div>
+  </header>
+</Layout>
+
+<style>
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--text-darkblue);
+  }
+
+  a {
+    font-family: robotobold_condensed;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .nav-boxes {
+    display: flex;
+    gap: 15px;
+    flex-grow: 0;
+  }
+
+  .nav-box {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .nav-box a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .search-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-grow: 0;
+  }
+
+  .search-toggle img {
+    width: 100%;
+    height: 50px;
+    place-self: right;
+  }
+
+  .search-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    width: 100%;
+    z-index: 10;
+  }
+
+  .search-dropdown input[type="text"] {
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 100%;
+    background-color: var(--kea-red);
+    color: white;
+    border: none;
+  }
+
+  .search-dropdown.show {
+    display: block;
+  }
+</style>
+
+<script type="module">
+  function toggleSearch() {
+    const dropdown = document.getElementById("searchDropdown");
+    dropdown.classList.toggle("show");
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.querySelector(".search-toggle");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", toggleSearch);
+    }
+  });
+</script>
