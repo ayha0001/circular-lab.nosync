@@ -1,4 +1,6 @@
 ---
+import OrangeBox from "../components/OrangeBox.astro";
+
 import Footer from "../components/Footer.astro";
 import DropDownPlus from "../components/DropDownPlus.astro";
 import Layout from "../layouts/Layout.astro";
@@ -23,6 +25,28 @@ console.log(data);
 <Layout>
   <body>
     <main>
+      <section class="section1">
+        <div>
+          <h1>Circular Lab</h1>
+          <h5>
+            Circular Lab er et community lab med fokus på cirkulære
+            forretningsmodeller, strategier og design. Circular Lab er for KEAs
+            studerende, undervisere og medlemmer af samarbejdende institutioner.
+            Circular Lab samarbejder på tværs af de andre labs på KEA. h5
+          </h5>
+          <p>
+            Circular Lab er et multifunktionelt rum, der indbyder til at
+            udforske og undersøge nye cirkulære forretningsmodeller, og hvordan
+            vi designer cirkulære produkter. Gennem workshops, foredrag,
+            community caféer og virksomhedsbesøg åbner vi op for mulighederne,
+            der følger med den cirkulære omstilling, og hvordan man kan udforske
+            dem igennem praksis og teori. Lab’et bruges til undervisning,
+            workshops, arrangementer, udstillinger og eksperimenter. Følg med i
+            kalenderen for at se de kommende events og happenings.
+          </p>
+        </div>
+        <OrangeBox />
+      </section>
       <section>
         <DropDownPlus
           title="Cirkulær vejledning"
@@ -58,3 +82,13 @@ console.log(data);
   </body>
   <Footer />
 </Layout>
+
+<style>
+  @media (min-width: 800px) {
+    .section1 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+  }
+</style>
