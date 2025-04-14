@@ -1,0 +1,200 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: var(--primary-lightgrey);
+}
+
+main {
+  margin: 25px;
+}
+
+@media (min-width: 1000px) {
+  main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
+  --primarybackground: #ededed;
+  --secondarybackground: #f39e9a;
+  --tertiarybackground: #ffdb7f;
+  --quaternarybackground: #b9ede7;
+  --quinarybackground: #ffce92;
+  --primarytext: #003b5b;
+  --secondarytext: white;
+  --logocolor: #ea4d44;
+  --boxcolor1: #ff9500;
+  --boxcolor2: #51d1bc;
+  --tertiary: #3f3f43;
+  --font1: pt sans caption;
+  --font2: roboto;
+}
+
+/* fonte */
+@font-face {
+  font-family: "robotobold_condensed";
+  src:
+    url("../fonts/roboto/roboto-boldcondensed-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-boldcondensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotoblack";
+  src:
+    url("../fonts/roboto/roboto-black-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotocondensed";
+  src:
+    url("../fonts/roboto/roboto-condensed-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-condensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotolight";
+  src:
+    url("../fonts/roboto/roboto-light-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotomedium";
+  src:
+    url("../fonts/roboto/roboto-medium-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotoregular";
+  src:
+    url("../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* font indstillinger */
+
+h1 {
+  font-family: "robotobold_condensed";
+  font-size: 3.3rem;
+  text-wrap: pretty;
+  color: var(--text-darkblue);
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  font-family: "robotomedium";
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  text-wrap: pretty;
+  color: var(--text-darkblue);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-family: "robotobold_condensed";
+}
+
+h4 {
+  font-family: "robotobold_condensed";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-darkblue);
+  margin-bottom: 0.8rem;
+}
+
+h5 {
+  font-family: "robotobold_condensed";
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 75ch;
+  line-height: 2.4rem;
+  color: var(--text-darkblue);
+}
+
+p {
+  font-family: "robotoregular";
+  font-size: 1rem;
+  line-height: 1.9rem;
+  color: var(--text-darkblue);
+}
+
+.p_white {
+  font-size: 1rem;
+  line-height: 1.9rem;
+  color: var(--white);
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 3.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  h2 {
+    font-family: "robotomedium";
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  h4 {
+    font-family: "robotobold_condensed";
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-darkblue);
+    margin-bottom: 0.8rem;
+  }
+
+  h5 {
+    font-family: "robotobold_condensed";
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 75ch;
+    line-height: 2.4rem;
+    color: var(--text-darkblue);
+  }
+
+  p {
+    font-family: "robotoregular";
+    font-size: 1rem;
+    line-height: 1.9rem;
+    color: var(--text-darkblue);
+  }
+
+  .p_white {
+    font-size: 1rem;
+    line-height: 1.9rem;
+    color: var(--white);
+  }
+}

@@ -18,12 +18,23 @@ body {
   background-color: var(--primary-lightgrey);
 }
 
+main {
+  margin: 25px;
+}
+
+@media (min-width: 800px) {
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
 html {
   --primary-lightgrey: #ededed;
   --text-darkblue: #003b5b;
   --white: #ffffff;
   --kea-red: #ea4d44;
-  --accent-orange: #ff7500;
+  --accent-orange: #ff9500;
   --tyrkis-dark: #51d1bc;
   --background-tyrkis: #b9ede7;
   --background-orange-light: #ffce92;
@@ -90,6 +101,7 @@ html {
 /* typografier */
 
 h1 {
+  font-family: "robotobold_condensed";
   line-height: 1.05;
   font-size: 62px;
   text-wrap: pretty;
@@ -130,13 +142,14 @@ h5 {
 }
 
 p {
-  font-size: 24px;
+  font-family: "robotomedium";
+  font-size: 16px;
   line-height: 1.9rem;
   color: var(--text-darkblue);
 }
 
 .p_white {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.9rem;
   color: var(--white);
 }
@@ -184,13 +197,13 @@ a {
   }
 
   p {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1.9rem;
     color: var(--text-darkblue);
   }
 
   .p_white {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1.9rem;
     color: var(--white);
   }
