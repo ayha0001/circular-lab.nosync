@@ -107,7 +107,7 @@ h1 {
   font-size: 3.3rem;
   text-wrap: pretty;
   color: var(--text-darkblue);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
 h2 {
@@ -116,7 +116,7 @@ h2 {
   line-height: 2.1rem;
   text-wrap: pretty;
   color: var(--text-darkblue);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 h3 {
@@ -157,14 +157,14 @@ p {
 @media (min-width: 1000px) {
   h1 {
     font-size: 3.8rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1.2rem;
   }
 
   h2 {
     font-family: "robotomedium";
     font-size: 1.4rem;
     line-height: 2.2rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.3rem;
   }
 
   h4 {
