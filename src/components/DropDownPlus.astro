@@ -4,19 +4,21 @@ import Layout from "../layouts/Layout.astro";
 import "../css/generel.css";
 ---
 
-<div class="accordion-wrapper">
-  <details class="accordion">
-    <summary>
-      <span class="title-text">
-        <h4>{title}</h4>
-      </span>
-      <span class="plus_icon">+ </span>
-    </summary>
-    <div class="content">
-      <p>{content}</p>
-    </div>
-  </details>
-</div>
+<Layout>
+  <div class="accordion-wrapper">
+    <details class="accordion">
+      <summary>
+        <span class="title-text">
+          <h4>{title}</h4>
+        </span>
+        <span class="plus_icon">+ </span>
+      </summary>
+      <div class="content">
+        <p>{content}</p>
+      </div>
+    </details>
+  </div>
+</Layout>
 
 <style>
   .accordion-wrapper {
