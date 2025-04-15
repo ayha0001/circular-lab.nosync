@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../css/generel2.css";
+---
+
+<Layout>
+  <div class="praktisk_singleview">
+    <h4>Praktisk</h4>
+    <p>9. april 2025 14.00 - 9. april 2025 16.00</p>
+
+    <a href="https://kea.safeticket.dk/circularlabrw3"
+      >Tilmeld dig på safeticket.dk</a
+    >
+
+    <h5>Location</h5>
+    <p>Circular Lab, GBG.A 129, Guldbergsgade 29N, 2200 København, Denmark</p>
+    <img src="/praktisk.webp" alt="Praktisk box til singleview" />
+  </div>
+</Layout>
+
+<style>
+  .praktisk_singleview {
+    background-color: #f99d1c;
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 480px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: #fff;
+  }
+
+  a {
+    font-family: "robotobold_condensed";
+  }
+
+  .praktisk_singleview h4,
+  .praktisk_singleview h5,
+  .praktisk_singleview p,
+  .praktisk_singleview a {
+    margin: 0;
+    color: #fff;
+  }
+
+  .praktisk_singleview a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .praktisk_singleview img {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 6px;
+  }
+</style>
