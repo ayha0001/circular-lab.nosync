@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../css/generel2.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PraktiskBoxSingle from "../components/PraktiskBoxSingle.astro";
+---
+
+<Layout>
+  <Header />
+  <section class="hero">
+    <img src="/heroimg.webp" alt="Beskrivelse af billedet" />
+  </section>
+  <main>
+    <section class="singleevent">
+      <div class="singleevent_intro">
+        <h1>Circular Lab - Repair Café</h1>
+        <h4>WORKSHOP</h4>
+        <h5 class="underoverskrift_event">
+          Repair Café i Circular Lab hvor vi arbejder med den cirkulære
+          forretningsmodel "reparation". På denne workshop har vi fokus på
+          lapning af tekstiler.
+        </h5>
+        <p>
+          Vil du gerne lære mere om cirkulære strategier inden for reperation?
+          Vil du gerne lære hvordan man kan reparere sit tøj ved hjælp af lapper
+          og tråd? Så kom med til Circular Labs Repair Café, hvor du lærer
+          forskellige teknikker du kan bruge til at reparere dit tøj eller
+          opgradere det til noget endnu bedre. Se hvad du har af ting i
+          klædeskabet der trænger til en overhaling, måske har du hul i et par
+          bukser, måske en skjorte der kunne klare lidt ekstra gas eller en
+          jakke med revne i foret - så kigger vi på det i fællesskab og du lærer
+          teknikker til hvordan du selv kan fikse tøjet og derved forlænge
+          levetiden af dit klædeskab.
+        </p>
+        <p>
+          Caféen afholdes i Circular Lab på Guldbergsgade 29N i lokale GBG.A129
+          klokken 14.00-16.00 Workshoppen er for alle studerende og medarbejdere
+          på KEA, uanset studieretning. Du behøver ikke have nogen erfaring med
+          at sy. Du skal selv medbringe tøjet du enten vil reparere eller
+          dekorere med de teknikker du lærer. Workshoppen faciliteres af Nikolaj
+          Storm (Circular Lab) og Stine (Fashion Lab)
+        </p>
+      </div>
+      <div>
+        <PraktiskBoxSingle />
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .singleevent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .singleevent_intro p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .underoverskrift_event {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 800px) {
+    .singleevent {
+      grid-template-columns: 2fr 1fr;
+      align-items: start;
+    }
+  }
+</style>
