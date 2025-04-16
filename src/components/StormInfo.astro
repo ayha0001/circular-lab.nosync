@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <footer>
+    <img src="/public/Ellipse.png" alt="" />
+    <div class="info">
+      <h5>Kontakt</h5>
+      <p>Nikolaj Storm Hauge Tost</p>
+      <p>E: nito@kea.dk</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 50px;
+  }
+  img {
+    width: 100px;
+  }
+  h5 {
+    font-family: "robotobold_condensed";
+  }
+  footer {
+    background-color: var(--primary-lightgrey);
+  }
+</style>
