@@ -4,6 +4,7 @@ import "../css/generel2.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PraktiskBoxSingle from "../components/PraktiskBoxSingle.astro";
+import StormInfo from "../components/StormInfo.astro";
 ---
 
 <Layout>
@@ -45,8 +46,12 @@ import PraktiskBoxSingle from "../components/PraktiskBoxSingle.astro";
       <div>
         <PraktiskBoxSingle />
       </div>
+      <a href="#">Tilmeld dig eventet her</a>
     </section>
   </main>
+
+  <StormInfo />
+
   <Footer />
 </Layout>
 
@@ -69,6 +74,19 @@ import PraktiskBoxSingle from "../components/PraktiskBoxSingle.astro";
 
   .underoverskrift_event {
     margin-bottom: 10px;
+  }
+
+  a {
+    font-family: robotobold_condensed;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+
+  a::before {
+    content: "➔";
+    display: inline-block;
+    margin-right: 0.3rem;
   }
 
   @media (min-width: 800px) {

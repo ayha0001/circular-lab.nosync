@@ -6,10 +6,14 @@ import "../css/generel2.css";
 <Layout>
   <div class="praktisk_singleview">
     <h4>Praktisk</h4>
-    <p>9. april 2025 14.00 - 9. april 2025 16.00</p>
+    <p class="ikonlinje">
+      <span class="emoji">⏰</span>
+      09. april 14.00 - 09.april 16.00
+    </p>
 
-    <a href="https://kea.safeticket.dk/circularlabrw3"
-      >Tilmeld dig på safeticket.dk</a
+    <a href="https://kea.safeticket.dk/circularlabrw3">
+      <span class="kalenderemoji">📅</span>
+      Tilmeld dig på safeticket.dk</a
     >
 
     <h5>Location</h5>
@@ -20,10 +24,9 @@ import "../css/generel2.css";
 
 <style>
   .praktisk_singleview {
-    background-color: #f99d1c;
+    background-color: var(--boxcolor1);
     padding: 1.5rem;
-    border-radius: 12px;
-    max-width: 480px;
+    max-width: 600px;
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
@@ -33,6 +36,20 @@ import "../css/generel2.css";
 
   a {
     font-family: "robotobold_condensed";
+  }
+
+  .ikonlinje {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .emoji {
+    font-size: 1.5rem;
+  }
+
+  .kalenderemoji {
+    margin-right: 10px;
   }
 
   .praktisk_singleview h4,
@@ -51,7 +68,7 @@ import "../css/generel2.css";
   .praktisk_singleview img {
     display: block;
     margin: 1.5rem auto 0 auto;
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     border-radius: 6px;
   }
