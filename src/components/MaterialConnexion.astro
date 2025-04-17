@@ -1,0 +1,110 @@
+---
+import "../css/generel2.css";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section>
+    <div class="grid_2-1">
+      <div class="container1">
+        <h5 class="adresse">Adresse</h5>
+        <p>
+          Adresse Material ConneXion ligger på Guldbergsgade 29N, bygning A,
+          lokale A129. Du finder indgangen igennem biblioteket.
+        </p>
+        <img src="/Material.png" alt="" />
+      </div>
+      <div class="container2">
+        <h4>Material Connexion</h4>
+        <p>
+          Material ConneXion er et materialebibliotek, hvor du får den nyeste
+          viden indenfor materialer med 500 fysiske prøver og en tilhørende
+          database, som består af 10.000+ materialeprøver indenfor kategorierne
+          polymers, naturals, metals, glass, process, ceramics, cement-based og
+          carbon-based. Det er udvalgte prøver som er innovative, bæredygtige og
+          kommercielt tilgængelige materialer. <br /><br />
+
+          Husk at besøge det fysiske Material ConneXion-bibliotek på Campus
+          Guldbergsgade! <br />
+          <br />
+
+          Du kan tilgå den <span
+            >digitale database som studerende og underviser på KEA via KEAs
+            Bibliotek.</span
+          >
+        </p>
+        <h5>Åbningstider i Material Connexion</h5>
+        <p class="gap">Mandag - fredag: kl. 8.30 - 22.00</p>
+        <a href="#">➜ Tilmeld dig Material Connexion</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  p {
+    font-family: "robotolight";
+  }
+
+  span {
+    font-family: "robotobold_condensed";
+    color: var(--primarycolor);
+    text-decoration: underline;
+  }
+
+  span:hover {
+    color: var(--primarycolor);
+  }
+  .container1 {
+    background-color: var(--boxcolor2);
+    padding: 1.3rem;
+  }
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem 0rem;
+  }
+
+  h5 {
+    margin-top: 1.5rem;
+  }
+
+  .adresse {
+    margin-top: 0rem;
+  }
+  section {
+    background-color: var(--quaternarybackground);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: #fff;
+  }
+
+  .gap {
+    margin-bottom: 1rem;
+  }
+  a {
+    font-family: "robotobold_condensed";
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--primarytext);
+  }
+
+  a:hover {
+    color: var(--logocolor);
+  }
+  @media (min-width: 750px) {
+    .grid_2-1 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10rem 0rem;
+    }
+  }
+</style>

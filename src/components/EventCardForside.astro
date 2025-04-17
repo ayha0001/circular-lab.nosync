@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import "../css/generel2.css";
 
 const url =
-  "https://evffelaoffslumrthkla.supabase.co/rest/v1/kalender_plugins?order=id.asc&offset=4&limit=6";
+  "https://evffelaoffslumrthkla.supabase.co/rest/v1/kalender_plugins?order=id.asc&offset=2&limit=3";
 const key =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV2ZmZlbGFvZmZzbHVtcnRoa2xhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjczMzAsImV4cCI6MjA1OTg0MzMzMH0.IQISTIgMb0f2rhVxPfZjE2st9c7H3A3EHI3DZ-mEHv8";
 
@@ -51,7 +51,6 @@ function formatTime(timeString) {
             {formatTime(event.timeend)}
           </p>
           <p class="p_intro">{event.introtext}</p>
-          <a href={`/events/${event.slug}`}>➜ Læs mere </a>
         </div>
       </article>
     ))
@@ -62,7 +61,7 @@ function formatTime(timeString) {
   article {
     width: 310px;
     margin-top: 1rem;
-    height: 420px;
+    height: auto;
   }
   h1 {
     margin-top: 8rem;
@@ -92,7 +91,6 @@ function formatTime(timeString) {
   }
   .p_intro {
     line-height: 1.4rem;
-    margin-bottom: 1rem;
   }
   a {
     font-family: "robotobold_condensed";

@@ -50,7 +50,7 @@ function formatTime(timeString) {
             {formatDate(event.date)} ⁕ {formatTime(event.timestart)} -
             {formatTime(event.timeend)}
           </p>
-          <p>{event.introtext}</p>
+          <p class="p_intro">{event.introtext}</p>
           <a href={`/events/${event.slug}`}>➜ Læs mere </a>
         </div>
       </article>
@@ -61,7 +61,7 @@ function formatTime(timeString) {
 <style>
   article {
     width: 310px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     height: 420px;
   }
   h1 {
@@ -80,7 +80,7 @@ function formatTime(timeString) {
   }
   h4 {
     font-family: "robotobold_condensed";
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-top: 0.6rem;
     color: var(--primarytext);
@@ -90,12 +90,37 @@ function formatTime(timeString) {
     font-family: "robotolight";
     font-size: 14px;
   }
-
+  .p_intro {
+    line-height: 1.4rem;
+    margin-bottom: 1rem;
+  }
   a {
     font-family: "robotobold_condensed";
     text-decoration: none;
     font-size: 18px;
     color: var(--primarytext);
-    margin-top: auto;
+  }
+
+  a:hover {
+    color: var(--logocolor);
+  }
+
+  @media (min-width: 850px) {
+    article {
+      width: 310px;
+      margin-top: 2rem;
+    }
+    h4 {
+      font-family: "robotobold_condensed";
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-top: 0.6rem;
+      color: var(--primarytext);
+    }
+
+    .p_intro {
+      line-height: 1.6rem;
+      margin-bottom: 1.3rem;
+    }
   }
 </style>
