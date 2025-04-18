@@ -121,7 +121,7 @@ h2 {
 
 h3 {
   font-family: "robotobold_condensed";
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: var(--primarytext);
   margin-bottom: 0.8rem;
 }
@@ -145,7 +145,7 @@ h5 {
 
 p {
   font-family: "robotoregular";
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 1.6rem;
   color: var(--primarytext);
 }
@@ -170,6 +170,13 @@ p {
     margin-bottom: 1.3rem;
   }
 
+  h3 {
+    font-family: "robotobold_condensed";
+    font-size: 2.3rem;
+    color: var(--primarytext);
+    margin-bottom: 0.8rem;
+  }
+
   h4 {
     font-family: "robotobold_condensed";
     font-size: 1.8rem;
@@ -189,7 +196,7 @@ p {
 
   p {
     font-family: "robotoregular";
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.9rem;
     color: var(--primarytext);
   }

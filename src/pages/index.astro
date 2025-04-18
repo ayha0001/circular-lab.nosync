@@ -10,6 +10,7 @@ import StormInfo from "../components/StormInfo.astro";
 import MaterialConnexion from "../components/MaterialConnexion.astro";
 import CircularLab from "../components/CircularLab.astro";
 import ForsideKalender from "../components/ForsideKalender.astro";
+import InstagramSection from "../components/InstagramSection.astro";
 //@ts-nocheck
 
 const url =
@@ -37,21 +38,24 @@ console.log(data);
       <section class="section1">
         <div class="textbox">
           <h1>Circular Lab</h1>
-          <h2>
+          <h5>
             Circular Lab er et community lab med fokus på cirkulære
             forretningsmodeller, strategier og design. Circular Lab er for KEAs
             studerende, undervisere og medlemmer af samarbejdende institutioner.
             Circular Lab samarbejder på tværs af de andre labs på KEA.
-          </h2>
+          </h5>
           <p>
             Circular Lab er et multifunktionelt rum, der indbyder til at
             udforske og undersøge nye cirkulære forretningsmodeller, og hvordan
             vi designer cirkulære produkter. Gennem workshops, foredrag,
             community caféer og virksomhedsbesøg åbner vi op for mulighederne,
             der følger med den cirkulære omstilling, og hvordan man kan udforske
-            dem igennem praksis og teori. Lab’et bruges til undervisning,
-            workshops, arrangementer, udstillinger og eksperimenter. Følg med i
-            kalenderen for at se de kommende events og happenings.
+            dem igennem praksis og teori. <br /><br />
+          </p>
+          <p>
+            Lab’et bruges til undervisning, workshops, arrangementer,
+            udstillinger og eksperimenter. Følg med i kalenderen for at se de
+            kommende events og happenings.
           </p>
         </div>
         <OrangeBox />
@@ -107,6 +111,7 @@ console.log(data);
       </section>
     </main>
   </body>
+  <InstagramSection />
   <CircularLab />
   <MaterialConnexion />
 
@@ -116,9 +121,20 @@ console.log(data);
   <style>
     .section1 {
       margin-bottom: 40px;
+      padding: 5rem 0rem;
     }
     .textbox {
       margin-bottom: 30px;
+    }
+
+    h5 {
+      line-height: 2rem;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 14px;
     }
     @media (min-width: 800px) {
       .section1 {
@@ -132,7 +148,6 @@ console.log(data);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100%;
       }
       .section3_frame {
         padding: 1rem;
