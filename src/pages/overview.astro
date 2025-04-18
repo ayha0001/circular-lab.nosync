@@ -1,9 +1,14 @@
 ---
+//@ts-nocheck
+
 import Layout from "../layouts/Layout.astro";
 import "../css/generel2.css";
 import Header from "../components/Header.astro";
 import StormInfo from "../components/StormInfo.astro";
 import Footer from "../components/Footer.astro";
+import EventCard from "../components/EventCard.astro";
+import EventCardMaj from "../components/EventCardMaj.astro";
+import EventCardJune from "../components/EventCardJune.astro";
 ---
 
 <Layout>
@@ -16,28 +21,85 @@ import Footer from "../components/Footer.astro";
       lagt ind i kalenderen.
     </h5>
 
-    <h4>April 2025</h4>
+    <h4>// April 2025</h4>
+    <div class="grid_1-1-1">
+      <EventCard />
+    </div>
 
-    <h4>Maj 2025</h4>
+    <h4>// Maj 2025</h4>
+    <div class="grid_1-1-1">
+      <EventCardMaj />
+    </div>
 
-    <h4>Juni 2025</h4>
+    <h4>// Juni 2025</h4>
+    <div class="grid_1-1-1">
+      <EventCardJune />
+    </div>
   </main>
-  <StormInfo />
+  <StormInfo backgroundColor="var(--quaternarybackground)" />
   <Footer />
 </Layout>
 
 <style>
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+  }
+  h4 {
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  h5 {
+    font-family: "robotobold_condensed";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 75ch;
+    line-height: 1.9rem;
+    color: var(--primarytext);
+  }
+
   h1 {
     margin-top: 8rem;
-    font-family: "robotobold_condensed";
   }
-
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
+  @media (min-width: 670px) {
+    .grid_1-1-1 {
+      margin: 0 auto;
+      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 8rem;
+      margin-left: 4rem;
+    }
   }
+  @media (min-width: 950px) {
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 8rem;
+      margin-left: 0rem;
+    }
+    h4 {
+      margin-top: 4rem;
+      margin-left: 0rem;
+    }
+    h5 {
+      font-family: "robotobold_condensed";
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-style: normal;
+      max-width: 75ch;
+      line-height: 1.9rem;
+      color: var(--primarytext);
+    }
 
-  h4 {
-    margin-top: 6rem;
+    h1 {
+      margin-top: 8rem;
+    }
   }
 </style>
