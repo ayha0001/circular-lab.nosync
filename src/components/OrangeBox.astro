@@ -13,7 +13,7 @@
     workshops eller andet.
   </p>
   <p class="bottomspace">
-    <a href="">(Se kalender)</a>
+    <a href="">(Tjek vores kalender for at se kommende events)</a>
   </p>
 
   <p class="p_white bottomspace">
@@ -35,13 +35,28 @@
   .orange-box {
     background-color: var(--boxcolor1);
     padding: 40px 30px;
-    color: white;
+    color: var(--secondarytext);
   }
   a {
     font-family: "robotobold_condensed";
-    color: white;
+    color: var(--secondarytext);
     font-weight: 900;
     text-decoration: underline;
+  }
+  a:hover {
+    transition: 0.3s;
+    color: var(--logocolor);
+  }
+
+  h4,
+  h5 {
+    color: var(--secondarytext);
+  }
+
+  p {
+    font-family: "robotolight";
+    font-size: 14px;
+    line-height: 1.6rem;
   }
   .bottomspace {
     margin-bottom: 0.9rem;

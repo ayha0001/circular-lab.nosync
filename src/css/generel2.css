@@ -11,7 +11,7 @@ img {
 }
 
 body {
-  background-color: var(--primary-lightgrey);
+  background-color: var(--primarybackground);
 }
 
 /* @media (min-width: 1000px) {
@@ -34,7 +34,7 @@ body {
   --primarytext: #003b5b;
   --secondarytext: white;
   --logocolor: #ea4d44;
-  --boxcolor1: #ff9500;
+  --boxcolor1: #ee7d31;
   --boxcolor2: #51d1bc;
   --tertiary: #3f3f43;
   --font1: pt sans caption;
@@ -102,7 +102,7 @@ h1 {
   font-family: "robotobold_condensed";
   font-size: 3.3rem;
   text-wrap: pretty;
-  color: var(--text-darkblue);
+  color: var(--primarytext);
   margin-bottom: 0.8rem;
 }
 
@@ -111,48 +111,64 @@ h2 {
   font-size: 2rem;
   line-height: 2.1rem;
   text-wrap: pretty;
+<<<<<<< HEAD
   color: var(--text-darkblue);
   margin-bottom: 1rem;
+=======
+  color: var(--primarytext);
+  margin-bottom: 0.6rem;
+>>>>>>> bfa0d60ddd3948f30a8f38d3f28aaa43623ad791
 }
 
 h3 {
   font-family: "robotobold_condensed";
+  font-size: 2rem;
+  color: var(--primarytext);
+  margin-bottom: 0.8rem;
 }
 
 h4 {
   font-family: "robotobold_condensed";
   font-size: 1.4rem;
   font-weight: 400;
-  color: var(--text-darkblue);
-  margin-bottom: 0.8rem;
+  color: var(--primarytext);
 }
 
 h5 {
   font-family: "robotomedium";
   font-size: 1.2rem;
+<<<<<<< HEAD
   line-height: 2.1rem;
   text-wrap: pretty;
   color: var(--text-darkblue);
   margin-bottom: 0.6rem;
+=======
+  font-weight: 400;
+  font-style: normal;
+  max-width: 75ch;
+  line-height: 2.4rem;
+  color: var(--primarytext);
+>>>>>>> bfa0d60ddd3948f30a8f38d3f28aaa43623ad791
 }
 
 p {
   font-family: "robotoregular";
-  font-size: 1rem;
-  line-height: 1.9rem;
-  color: var(--text-darkblue);
+  font-size: 14px;
+  line-height: 1.6rem;
+  color: var(--primarytext);
 }
 
 .p_white {
   font-size: 1rem;
   line-height: 1.9rem;
-  color: var(--white);
+  color: var(--secondarytext);
 }
 
 @media (min-width: 1000px) {
   h1 {
     font-size: 3.8rem;
     margin-bottom: 1.2rem;
+    line-height: 4rem;
   }
 
   h2 {
@@ -162,31 +178,47 @@ p {
     margin-bottom: 1.3rem;
   }
 
+  h3 {
+    font-family: "robotobold_condensed";
+    font-size: 2.3rem;
+    color: var(--primarytext);
+    margin-bottom: 0.8rem;
+  }
+
   h4 {
     font-family: "robotobold_condensed";
     font-size: 1.8rem;
     font-weight: 400;
-    color: var(--text-darkblue);
-    margin-bottom: 0.8rem;
+    color: var(--primarytext);
   }
 
   h5 {
+<<<<<<< HEAD
     font-family: "robotomedium";
     font-size: 1.4rem;
     line-height: 2.2rem;
     margin-bottom: 1.3rem;
+=======
+    font-family: "robotobold_condensed";
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 75ch;
+    line-height: 2.2rem;
+    color: var(--primarytext);
+>>>>>>> bfa0d60ddd3948f30a8f38d3f28aaa43623ad791
   }
 
   p {
     font-family: "robotoregular";
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.9rem;
-    color: var(--text-darkblue);
+    color: var(--primarytext);
   }
 
   .p_white {
     font-size: 1rem;
     line-height: 1.9rem;
-    color: var(--white);
+    color: var(--secondarytext);
   }
 }

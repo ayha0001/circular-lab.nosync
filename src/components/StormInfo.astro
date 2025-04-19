@@ -1,0 +1,45 @@
+---
+//@ts-nocheck
+import Layout from "../layouts/Layout.astro";
+
+const { backgroundColor } = Astro.props; // Modtag backgroundColor som en prop
+---
+
+<Layout>
+  <footer style={`background-color: ${backgroundColor};`}>
+    <img src="/public/Ellipse.png" alt="" />
+    <div class="info">
+      <h5>Kontakt</h5>
+      <p>Nikolaj Storm Hauge Tost</p>
+      <p>E: nito@kea.dk</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 50px;
+  }
+  img {
+    width: 120px;
+    margin-left: 0rem;
+  }
+  h5 {
+    font-family: "robotobold_condensed";
+  }
+
+  @media (min-width: 1000px) {
+    footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 50px;
+    }
+    img {
+      margin-left: 11rem;
+    }
+  }
+</style>

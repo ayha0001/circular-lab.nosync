@@ -4,80 +4,151 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <footer>
-    <div>
-      <h3>Kea - Københavns Erhvervsakademi</h3>
+    <div class="max-width">
+      <div>
+        <h3>Kea - Københavns <br />Erhvervsakademi</h3>
 
-      <li>Guldbergsgade 29N 2200 København N.</li>
-      <li>Du skal ikke bare vide. Du skal kunne.</li>
+        <li>Guldbergsgade 29N</li>
+        <li>2200 København N.</li>
 
-      <img src="/public/facebook.svg" alt="" />
-      <img src="/public/linkdin.svg" alt="" />
-      <img src="/public/instagram.png" alt="" />
-      <img src="/public/twitter.svg" alt="" />
-      <img src="/public/youtube.svg" alt="" />
-      <img class="podbean" src="/public/podbean.svg" alt="" />
-    </div>
-    <div>
-      <h3>Vejledning</h3>
+        <p><br /><br />Du skal ikke bare vide.</p>
+        <p>Du skal kunne.</p>
 
-      <li>
-        <a href="">Studieadministrationen</a>
-      </li>
-      <li><a href="">Studie- og Karrierevejledning</a></li>
-      <li><a href="">SPS (specialpædagogisk støtte)</a></li>
-      <li><a href="">SU-vejledning</a></li>
-      <li><a href="">Praktik</a></li>
-    </div>
-    <div>
-      <h3>Relevante Links</h3>
+        <div class="socialmedia">
+          <img src="/public/Some_logoer.png" alt="" />
+        </div>
+        <img class="podbean" src="/public/podbean.svg" alt="" />
+      </div>
+      <div>
+        <h3>Vejledning</h3>
 
-      <li><a href="">KEA Webmail</a></li>
-      <li><a href="">KEA Bibliotek</a></li>
-      <li><a href="">Studieviden</a></li>
-      <li><a href="">Itslearning</a></li>
-      <li><a href="">Fag- og modulkatalog</a></li>
-      <li><a href="">Studieaktivitetsmodel</a></li>
-      <li><a href="">PARIS-aftalen</a></li>
-      <li><a href="">Ordensregler</a></li>
-    </div>
-    <div>
-      <h3>Praktisk Info</h3>
+        <li>
+          <a href="#">Studieadministrationen</a>
+        </li>
+        <li><a href="">Studie- og Karrierevejledning</a></li>
+        <li><a href="">SPS (specialpædagogisk støtte)</a></li>
+        <li><a href="">SU-vejledning</a></li>
+        <li><a href="">Praktik</a></li>
+      </div>
+      <div>
+        <h3>Relevante Links</h3>
 
-      <li><a href="">Cookies og privatliv</a></li>
-      <li><a href="">Persondatapolitik</a></li>
-      <li><a href="">Tilgængelighedserklæring</a></li>
-      <li><a href="">Find vej på KEA</a></li>
+        <li><a href="#">KEA Webmail</a></li>
+        <li><a href="#">KEA Bibliotek</a></li>
+        <li><a href="#">Studieviden</a></li>
+        <li><a href="#">Itslearning</a></li>
+        <li><a href="#">Fag- og modulkatalog</a></li>
+        <li><a href="#">Studieaktivitetsmodel</a></li>
+        <li><a href="#">PARIS-aftalen</a></li>
+        <li><a href="#">Ordensregler</a></li>
+      </div>
+      <div>
+        <h3>Praktisk Info</h3>
+
+        <li><a href="#">Cookies og privatliv</a></li>
+        <li><a href="#">Persondatapolitik</a></li>
+        <li><a href="#">Tilgængelighedserklæring</a></li>
+        <li><a href="#">Find vej på KEA</a></li>
+      </div>
     </div>
   </footer>
 </Layout>
 <style>
   footer {
     background-color: rgba(35, 50, 73, 1);
+
+    padding: 60px;
+  }
+  .max-width {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 10px;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .socialmedia img {
+    width: 50%;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   h3 {
-    font-family: Helvetica, sans-serif;
-    color: white;
+    font-family: "robotobold_condensed";
+    color: var(--secondarytext);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-size: 20px;
   }
   li {
     margin-bottom: 10px;
   }
   li,
   a {
-    font-family: Helvetica, sans-serif;
-    color: white;
+    font-family: "robotolight";
+    font-size: 12px;
+    color: var(--secondarytext);
     text-decoration: none;
     list-style: none;
   }
-  img {
-    height: 40px;
-    width: 40px;
+
+  a:hover {
+    color: var(--logocolor);
+  }
+
+  p {
+    font-family: "robotomedium";
+    font-size: 14px;
+    color: var(--secondarytext);
   }
   .podbean {
-    height: 150px;
-    width: 150px;
+    width: 130px;
+  }
+  @media (min-width: 850px) {
+    footer {
+      background-color: rgba(35, 50, 73, 1);
+
+      padding: 60px;
+    }
+    .max-width {
+      display: grid;
+      width: 1200px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin: 0 auto;
+    }
+
+    .socialmedia img {
+      width: 70%;
+      margin-top: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    h3 {
+      font-family: "robotobold_condensed";
+      color: var(--secondarytext);
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    li,
+    a {
+      font-family: "robotolight";
+      font-size: 14px;
+      color: var(--secondarytext);
+      text-decoration: none;
+      list-style: none;
+    }
+
+    a:hover {
+      color: var(--logocolor);
+    }
+
+    p {
+      font-family: "robotomedium";
+      font-size: 14px;
+      color: var(--secondarytext);
+    }
+    .podbean {
+      width: 150px;
+    }
   }
 </style>
