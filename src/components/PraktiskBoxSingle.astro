@@ -1,25 +1,76 @@
 ---
+//@ts-nocheck
 import Layout from "../layouts/Layout.astro";
 import "../css/generel2.css";
+
+const { img, date, timestart, timeend } = Astro.props;
+
+const url =
+  "https://evffelaoffslumrthkla.supabase.co/rest/v1/kalender_plugins?order=id.asc&limit=1";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV2ZmZlbGFvZmZzbHVtcnRoa2xhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjczMzAsImV4cCI6MjA1OTg0MzMzMH0.IQISTIgMb0f2rhVxPfZjE2st9c7H3A3EHI3DZ-mEHv8";
+
+const options = {
+  headers: {
+    apiKey: key,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+console.log(data);
+
+function formatDate(dateString) {
+  const [year, month, day] = dateString.split("-");
+  return `${day}-${month}-${year}`;
+}
+
+function formatTime(timeString) {
+  if (!timeString) {
+    return "Invalid time";
+  }
+
+  if (timeString.includes(":")) {
+    return timeString.slice(0, 5);
+  }
+
+  const hours = timeString.slice(0, 2);
+  const minutes = timeString.slice(2, 4);
+  return `${hours}:${minutes}`;
+}
 ---
 
 <Layout>
-  <div class="praktisk_singleview">
-    <h4>Praktisk</h4>
-    <p class="ikonlinje">
-      <span class="emoji">⏰</span>
-      09. april 14.00 - 09.april 16.00
-    </p>
+  {
+    data.map((event) => (
+      <article>
+        <div class="praktisk_singleview">
+          <h4>Praktisk</h4>
+          <p class="ikonlinje">
+            <p class="date">
+              <span class="emoji">⏰</span>
+              {formatDate(date)}: {formatTime(timestart)} -{formatTime(timeend)}
+            </p>
+          </p>
 
-    <a href="https://kea.safeticket.dk/circularlabrw3">
-      <span class="kalenderemoji">📅</span>
-      Tilmeld dig på safeticket.dk</a
-    >
+          <a href="https://kea.safeticket.dk/">
+            <span class="kalenderemoji">📅</span>
+            Tilmeld dig på safeticket.dk
+          </a>
 
-    <h5>Location</h5>
-    <p>Circular Lab, GBG.A 129, Guldbergsgade 29N, 2200 København, Denmark</p>
-    <img src="/praktisk.webp" alt="Praktisk box til singleview" />
-  </div>
+          <h5>
+            <>
+              <br />
+            </>
+            Location
+          </h5>
+          <p>
+            Circular Lab, GBG.A 129, Guldbergsgade 29N, 2200 København, Denmark
+          </p>
+          <img src={img} alt={event.title} />
+        </div>
+      </article>
+    ))
+  }
 </Layout>
 
 <style>
@@ -27,10 +78,8 @@ import "../css/generel2.css";
     background-color: var(--boxcolor1);
     padding: 1.5rem;
     max-width: 600px;
-    margin: 2rem auto;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
     color: #fff;
   }
 
@@ -41,7 +90,6 @@ import "../css/generel2.css";
   .ikonlinje {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
   }
 
   .emoji {
