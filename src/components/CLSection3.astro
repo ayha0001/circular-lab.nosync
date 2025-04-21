@@ -1,0 +1,81 @@
+---
+//@ts-nocheck
+import "../css/generel2.css";
+import DropDownPlus from "../components/DropDownPlus.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <section class="section3_frame">
+      <div class="section3">
+        <div>
+          <h1>Hvad <br />tilbyder vi?</h1>
+          <h5>
+            Har du/I allerede nu spørgsmål omkring cirkularitet, eller har du/I
+            jeres eget cirkulære tiltag, I ønsker at teste af i labbet eller har
+            du/I input til aktiviteter i labbet, kan du/I altid kontakte os på
+            circular@kea.dk.
+          </h5>
+        </div>
+        <div>
+          <DropDownPlus
+            title="Cirkulær vejledning"
+            content="Har du et projekt, hvor du skal tænke cirkulært? Kom ned i labbet og få vejledning i design, materialer, forretningsmodeller og strategier for cirkularitet. Vi hjælper dig med at optimere dit projekt, og du kan få vejledning i de bemandede åbningstider eller booke tid ved at kontakte Nikolaj Storm på circular@kea.dk."
+          />
+
+          <DropDownPlus
+            title="Cirkulært iværksætteri"
+            content="Er du iværksætter med din egen virksomhed, eller en del af KEAs Startup Hub, og ønsker at undersøge mulighederne for at gøre din virksomhed cirkulær i tråd med ny lovgivning? Så book en coaching med Cirkulær lab manager Nikolaj Storm (circular@kea.dk)"
+          />
+
+          <DropDownPlus
+            title="Cirkulære workshops"
+            content="Er du underviser eller studerende, der ønsker et cirkulært indspark i undervisningen? Circular Lab tilbyder workshops og foredrag om cirkularitet og cirkulære forretningsmodeller, baseret på materiale fra Regndans, Ellen McArthur Foundation og Dansk Design Center. Vi skræddersyr workshops til jeres programområde, så både studerende og undervisere bliver klædt på til en cirkulær fremtid."
+          />
+
+          <DropDownPlus
+            title="Adgang til nyeste forskning"
+            content="Hos Circular Lab holder vi os opdaterede på den nyeste forskning inden for cirkularitet. Mange virksomheder og brancher er netop i gang med at implementere forskellige cirkulære forretningsmodeller, og vi følger med for at kunne guide jer til de bedste løsninger netop nu. Så har du brug for den nyeste viden eller savner du noget forskning netop indenfor dit felt? Så kom forbi labbet og hør nærmere."
+          />
+
+          <DropDownPlus
+            title="Cirkulære foredrag"
+            content="Der sker meget inden for cirkularitet, og vi afholder løbende foredrag og events med relevante aktører, så studerende og medarbejdere kan få indsigt i, hvordan cirkularitet arbejdes med i praksis. Bliv inspireret på tværs af brancher og skab nye ideer og cirkulære modeller. Har du en spændende tale, vil vi gerne høre fra dig. Kom forbi labbet og lad os tale om mulighederne. Hold dig opdateret i kalenderen for kommende foredrag."
+          />
+
+          <DropDownPlus
+            title="Circular skills"
+            content="Cirkularitet handler om nye forretningsmuligheder, men kræver også mange værktøjer som reparation, opgraderinger, redesigns og meget mere. Vi afholder løbende workshops med forskellige temaer, hvor vi træner cirkulære skills.Vores workshops er åbne for alle og derfor også en mulighed for at udvide dit cirkulære netværk, men også at få tilegnet nye færdigheder, der måske ligger uden for dit programområde."
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  h5 {
+    line-height: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  @media (min-width: 800px) {
+    .section3_frame {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section3 {
+      display: grid;
+      max-width: 1200px;
+      grid-template-columns: 1fr 2fr;
+      padding: 8rem 2rem;
+    }
+  }
+</style>

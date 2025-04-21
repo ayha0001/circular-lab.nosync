@@ -2,6 +2,11 @@
 //@ts-nocheck
 
 import Layout from "../../layouts/Layout.astro";
+import "../../css/generel2.css";
+import Header from "../../components/Header.astro";
+import StormInfo from "../../components/StormInfo.astro";
+import Footer from "../../components/Footer.astro";
+import PraktiskBoxSingle from "../../components/PraktiskBoxSingle.astro";
 
 export async function getStaticPaths() {
   //   const response = await fetch('...');
@@ -34,5 +39,119 @@ const { kalender_plugins } = Astro.props;
 
 <!-- Jeg kan skrive title her, som jeg definerer i Layout.astro. Pga det kommer navnet oppe i fanen til at hedde det eventet handler om, i single view -->
 <Layout title={kalender_plugins.title}>
-  <h1>{kalender_plugins.title}</h1>
+  <Header />
+  <section class="hero">
+    <img src="/heroimg.webp" alt="Beskrivelse af billedet" />
+  </section>
+  <main>
+    <a href="/overview" class="link">// Gå tilbage til kalenderen</a>
+    <section class="singleevent">
+      <div class="singleevent_intro">
+        <h1>{kalender_plugins.title}</h1>
+        <h4>{kalender_plugins.type}</h4>
+        <h5 class="underoverskrift_event">
+          {kalender_plugins.introtext}
+        </h5>
+        <p>
+          {kalender_plugins.description}
+        </p>
+        <a href="https://kea.safeticket.dk/">➜ Tilmeld dig eventet her</a>
+      </div>
+      <div>
+        <PraktiskBoxSingle
+          img={`/imgs_cl/${kalender_plugins.image_url}`}
+          date={kalender_plugins.date}
+          timestart={kalender_plugins.timestart}
+          timeend={kalender_plugins.timeend}
+        />
+      </div>
+    </section>
+  </main>
+
+  <StormInfo backgroundColor="var(--quaternarybackground)" />
+
+  <Footer />
 </Layout>
+
+<style>
+  .singleevent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+
+  .hero {
+    margin-bottom: 1rem;
+  }
+
+  .singleevent_intro p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .underoverskrift_event {
+    margin-bottom: 10px;
+  }
+
+  a {
+    font-family: "robotobold_condensed";
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--primarytext);
+  }
+
+  a:hover {
+    transition: 0.3s;
+    color: var(--logocolor);
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 1rem;
+    line-height: 2.8rem;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    line-height: 1.7rem;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 800px) {
+    .singleevent {
+      grid-template-columns: 2fr 1fr;
+      align-items: start;
+      margin-top: 60px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-size: 24px;
+    }
+
+    h5 {
+      font-size: 22px;
+      max-width: 540px;
+    }
+
+    p {
+      margin-top: 3rem;
+      font-family: "robotolight";
+      line-height: 2rem;
+    }
+  }
+</style>
