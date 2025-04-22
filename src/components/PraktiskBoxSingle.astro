@@ -3,7 +3,7 @@
 import Layout from "../layouts/Layout.astro";
 import "../css/generel2.css";
 
-// const { img, date, timestart, timeend } = Astro.props;
+const { img, dato, timestart, timeend } = Astro.props;
 
 const url =
   "https://evffelaoffslumrthkla.supabase.co/rest/v1/kalender_plugins?order=id.asc&limit=1";
@@ -48,7 +48,7 @@ function formatTime(timeString) {
           <p class="ikonlinje">
             <p class="date">
               <span class="emoji">⏰</span>
-              {formatDate(date)}: {formatTime(timestart)} -{formatTime(timeend)}
+              {formatDate(dato)}: {formatTime(timestart)} -{formatTime(timeend)}
             </p>
           </p>
 
