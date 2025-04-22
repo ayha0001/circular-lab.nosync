@@ -20,6 +20,10 @@ const data = await fetch(url, options).then((res) => res.json());
 console.log(data);
 
 function formatDate(dateString) {
+  if (typeof dateString !== "string" || !dateString.includes("-")) {
+    return "Invalid date";
+  }
+
   const [year, month, day] = dateString.split("-");
   return `${day}-${month}-${year}`;
 }
